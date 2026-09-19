@@ -5,9 +5,9 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       children: [
-        ElevatedButton(onPressed: null, child: Text('Boton #1')),
+        ElevatedButton(onPressed: null, child: Text('Boton #1'),),
         ElevatedButton(onPressed: null, child: Text('Boton #2'))
       ],
     );
