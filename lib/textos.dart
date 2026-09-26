@@ -14,11 +14,22 @@ class Textos extends StatelessWidget {
         title: Text('Textos'),
       ),
 
-      body: Column(
-        children: [
-          Text('DNI: $dni', style: TextStyle(fontSize: 40),),
-          Text('Nombre: $nombre', style: TextStyle(fontSize: 40),),
-        ],
+      body: Padding(
+        padding: EdgeInsets.all(30),
+        child: Column(
+          children: [
+            Text('DNI: $dni', style: TextStyle(fontSize: 40),),
+            Text('Nombre: $nombre', style: TextStyle(fontSize: 40),),
+            Container(
+              width: 60,
+              height: 60,
+              color: Colors.black,
+              child: Center(
+                child: Text('1', style: TextStyle(color: Colors.white,fontSize: 30),),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
