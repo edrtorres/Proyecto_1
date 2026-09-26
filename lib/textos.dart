@@ -17,6 +17,8 @@ class Textos extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.all(30),
         child: Column(
+                  //mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text('DNI: $dni', style: TextStyle(fontSize: 40),),
             Text('Nombre: $nombre', style: TextStyle(fontSize: 40),),

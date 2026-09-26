@@ -16,6 +16,8 @@ class Disenios extends StatelessWidget {
         title: Text('Disenios'),
       ),
       body: Column(
+        //mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.end,
         spacing: 20,
         children: [
         Icon(Icons.person, size: 100, color: Colors.blue),
