@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_1/textos.dart';
 
 class Disenios extends StatelessWidget {
+  
   const Disenios({super.key});
 
   @override
   Widget build(BuildContext context) {
   //  return Icon(Icons.code);
+  // Declarando los controladores para manipular las cajas de texto
+  TextEditingController dniController = TextEditingController();
+  TextEditingController nombreController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         title: Text('Disenios'),
@@ -26,6 +31,7 @@ class Disenios extends StatelessWidget {
           ],
         ),
         TextField(
+          controller: dniController, // Controlador
           decoration: InputDecoration(
             hintText: 'Ingrese su DNI',
             border: OutlineInputBorder(),
@@ -35,6 +41,7 @@ class Disenios extends StatelessWidget {
         ),
         SizedBox(height: 20,),// para agregar espacios o encerrar widgets
         TextField(
+          controller: nombreController, // Controlador
           decoration: InputDecoration(
             hintText: 'Ingrese su nombre',
             border: OutlineInputBorder(),
@@ -42,7 +49,24 @@ class Disenios extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: (){}, 
+          onPressed: (){
+            // Obtener el valor de las cajas de texto
+            // dentro de .Text esta el contenido
+            String dni = dniController.text;
+            String nombre = nombreController.text;
+            // Si ambas cajas de texto tiene datos
+            // llamamos la siguiente pantalla
+            if(dni.isNotEmpty && nombre.isNotEmpty){
+              
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context)=>Textos(dni: dni, nombre: nombre,)
+                  )
+              );
+
+            }
+          }, 
           icon: Icon(
             Icons.play_arrow,
             size:60,
