@@ -28,7 +28,8 @@ class Disenios extends StatelessWidget {
         TextField(
           decoration: InputDecoration(
             hintText: 'Ingrese su DNI',
-            border: OutlineInputBorder()
+            border: OutlineInputBorder(),
+            labelText: 'DNI'
 
           ),
         ),
@@ -36,9 +37,17 @@ class Disenios extends StatelessWidget {
         TextField(
           decoration: InputDecoration(
             hintText: 'Ingrese su nombre',
-            border: OutlineInputBorder()
+            border: OutlineInputBorder(),
+            labelText: 'Nombre'
           ),
         ),
+        IconButton(
+          onPressed: (){}, 
+          icon: Icon(
+            Icons.play_arrow,
+            size:60,
+            color: Colors.green,
+            ))
         ],
       /* Text(
         'Este es un texto',
