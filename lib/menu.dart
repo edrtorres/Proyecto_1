@@ -17,7 +17,6 @@ class Menu extends StatelessWidget {
               builder: (context)=>Disenios()
             )
             );
-            
           }, 
         child: Text('Boton #1'),),
         ElevatedButton(onPressed: null, child: Text('Boton #2'))
